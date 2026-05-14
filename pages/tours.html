@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="סיורי מנהרות הכותל — המסע לירושלים, מסלול הגשר הגדול, מסלול האבן הגדולה ומרכז המבקרים שער השמיים." />
+  <title>סיורים וחוויות | הכותל המערבי</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Heebo:wght@300;400;500;600;700;800&family=David+Libre:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .tour-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      margin-bottom: 100px;
+    }
+    .tour-row:nth-child(even) .tour-image { order: 2; }
+    .tour-row:last-child { margin-bottom: 0; }
+    .tour-image {
+      aspect-ratio: 4 / 3;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      position: relative;
+    }
+    .tour-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 1s var(--ease); }
+    .tour-image:hover img { transform: scale(1.05); }
+    .tour-image .duration-badge {
+      position: absolute; top: 24px; right: 24px;
+      background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
+      padding: 8px 16px; border-radius: 999px;
+      font-size: 0.85rem; font-weight: 600; color: var(--ink-900);
+    }
+    .tour-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin: 24px 0 32px;
+    }
+    .tour-feature {
+      display: flex; gap: 12px; align-items: center;
+      font-size: 0.92rem;
+    }
+    .tour-feature svg { width: 20px; height: 20px; color: var(--stone-600); flex-shrink: 0; }
+    .tour-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+    @media (max-width: 900px) {
+      .tour-row { grid-template-columns: 1fr; gap: 32px; margin-bottom: 60px; }
+      .tour-row:nth-child(even) .tour-image { order: 0; }
+    }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23d4a854'/%3E%3Cpath d='M10 22V11l6-3 6 3v11M10 22h12M13 22v-6h6v6' fill='none' stroke='%231a1d2e' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+<header class="site-header transparent" id="siteHeader">
+  <div class="container nav-wrap">
+    <a href="../index.html" class="logo">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-5 9 5v12"/><path d="M3 21h18M9 21v-9h6v9"/></svg></span>
+      <span class="logo-text"><strong>הכותל המערבי</strong><span>The Western Wall</span></span>
+    </a>
+    <nav class="nav" id="mainNav">
+      <a href="../index.html" class="nav-link">בית</a>
+      <a href="tours.html" class="nav-link">סיורים</a>
+      <a href="events.html" class="nav-link">אירועים</a>
+      <a href="visitor-info.html" class="nav-link">מידע למבקר</a>
+      <a href="gallery.html" class="nav-link">גלריה</a>
+      <a href="about.html" class="nav-link">אודות</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="donate.html" class="btn btn-ghost">לתרומה</a>
+      <a href="send-note.html" class="btn btn-gold">שלחו פתק</a>
+      <button class="menu-toggle" aria-label="תפריט" id="menuToggle"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="page-hero-bg">
+    <img src="https://images.unsplash.com/photo-1601923250803-cbf8acbf4f49?auto=format&fit=crop&w=2000&q=80" alt="" />
+  </div>
+  <div class="container page-hero-content">
+    <div class="breadcrumb">
+      <a href="../index.html">בית</a>
+      <span class="sep">/</span>
+      <span>סיורים וחוויות</span>
+    </div>
+    <h1>סיורים וחוויות</h1>
+    <p>מתחת לרחבה ובסביבותיה נחשפים אלפיים שנות היסטוריה. בחרו את המסע שלכם והגיעו אל הסיפור.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="tour-row reveal">
+      <div class="tour-image">
+        <div class="duration-badge">⏱ 75 דקות</div>
+        <img src="https://images.unsplash.com/photo-1601923250803-cbf8acbf4f49?auto=format&fit=crop&w=1200&q=80" alt="המסע לירושלים" loading="lazy" />
+      </div>
+      <div>
+        <span class="eyebrow">חוויה מרכזית</span>
+        <h2>המסע לירושלים</h2>
+        <p style="font-size:1.15rem;color:var(--ink-700);">חוויה אודיו-ויזואלית מרהיבה שלוקחת אתכם אלפיים שנה אחורה — אל שיא תפארתה של ירושלים בימי הבית השני, מבטה של נערה בת זמננו והמסע שלה אל שורשי עמה.</p>
+        <p style="color:var(--text-muted);">סינמה אימרסיבית בשבעה אולמות, הקרנות 360 מעלות, אפקטים מיוחדים ופסקול ייחודי. מתאים לכל המשפחה מגיל 6.</p>
+        <div class="tour-features">
+          <div class="tour-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 75 דקות</div>
+          <div class="tour-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg> מגיל 6+</div>
+          <div class="tour-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20M2 12c0 5.5 4.5 10 10 10s10-4.5 10-10S17.5 2 12 2 2 6.5 2 12z"/><path d="M12 2c2.5 2.5 4 6 4 10s-1.5 7.5-4 10c-2.5-2.5-4-6-4-10s1.5-7.5 4-10z"/></svg> עברית / אנגלית</div>
+          <div class="tour-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> נגיש</div>
+        </div>
+        <div class="tour-cta">
+          <a href="#booking" class="btn btn-primary">הזמנת כרטיסים</a>
+          <a href="#" class="btn btn-ghost">צפו בטריילר</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="tour-row reveal">
+      <div class="tour-image">
+        <div class="duration-badge">⏱ 90 דקות</div>
+        <img src="https://images.unsplash.com/photo-1583416750470-965b2707b355?auto=format&fit=crop&w=1200&q=80" alt="מסלול הגשר הגדול" loading="lazy" />
+      </div>
+      <div>
+        <span class="eyebrow">מנהרות הכותל</span>
+        <h2>מסלול הגשר הגדול</h2>
+        <p style="font-size:1.15rem;color:var(--ink-700);">צעדו בנתיב שבו עלו עולי הרגל אל בית המקדש. גשר ענק שמתח את הר הבית לעיר העליונה, אבני ענק ושרידי רחוב הירודיאני המקורי.</p>
+        <p style="color:var(--text-muted);">מסלול חדש ומרהיב שנפתח לאחרונה, מציע מבט מקרוב אל ההנדסה המופלאה של ימי הבית השני.</p>
+        <div class="tour-features">
+          <div class="tour-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 90 דקות</div>
+          <div class="tour-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> מגיל 8+</div>
+          <div class="tour-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> 600 מטר</div>
+          <div class="tour-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-9M14 17H5M12 12H3M20 12h-3"/></svg> מדריך מוסמך</div>
+        </div>
+        <div class="tour-cta">
+          <a href="#booking" class="btn btn-primary">הזמנת כרטיסים</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="tour-row reveal">
+      <div class="tour-image">
+        <div class="duration-badge">⏱ 75 דקות</div>
+        <img src="https://images.unsplash.com/photo-1591608971362-f08b2a75731a?auto=format&fit=crop&w=1200&q=80" alt="מסלול האבן הגדולה" loading="lazy" />
+      </div>
+      <div>
+        <span class="eyebrow">קלאסי וחוויתי</span>
+        <h2>מסלול האבן הגדולה</h2>
+        <p style="font-size:1.15rem;color:var(--ink-700);">המסלול המסורתי של מנהרות הכותל, ובו פוגשים את האבן הגדולה — אבן שמשקלה כ-570 טון, מהאבנים הגדולות בעולם שעובדו בידי אדם.</p>
+        <p style="color:var(--text-muted);">חוויה לכל בני המשפחה: בריכת שתייה עתיקה, סלע השתייה, ושפע סיפורים על ירושלים בעידן בית המקדש.</p>
+        <div class="tour-features">
+          <div class="tour-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 75 דקות</div>
+          <div class="tour-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> כל הגילאים</div>
+          <div class="tour-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> 488 מטרים</div>
+          <div class="tour-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-9M14 17H5M12 12H3M20 12h-3"/></svg> 7 שפות</div>
+        </div>
+        <div class="tour-cta">
+          <a href="#booking" class="btn btn-primary">הזמנת כרטיסים</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="tour-row reveal">
+      <div class="tour-image">
+        <div class="duration-badge">⏱ 60 דקות</div>
+        <img src="https://images.unsplash.com/photo-1542630858-c08a937c1f4f?auto=format&fit=crop&w=1200&q=80" alt="מרכז המבקרים" loading="lazy" />
+      </div>
+      <div>
+        <span class="eyebrow">חדש</span>
+        <h2>מרכז המבקרים<br/>"שער השמיים"</h2>
+        <p style="font-size:1.15rem;color:var(--ink-700);">מרכז מבקרים חדשני שמשלב טכנולוגיה מתקדמת עם סיפור הכותל לאורך הדורות. הקרנות הולוגרפיות, מודלים מדויקים ותחנות אינטראקטיביות.</p>
+        <p style="color:var(--text-muted);">נקודת פתיחה מומלצת לכל ביקור בכותל — להבנת ההקשר ההיסטורי, הארכיאולוגי והרוחני.</p>
+        <div class="tour-features">
+          <div class="tour-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 60 דקות</div>
+          <div class="tour-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg> כל הגילאים</div>
+          <div class="tour-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg> נגיש מלא</div>
+          <div class="tour-feature"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg> אינטראקטיבי</div>
+        </div>
+        <div class="tour-cta">
+          <a href="#booking" class="btn btn-primary">הזמנת כרטיסים</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Booking CTA -->
+<section class="section donate-banner" id="booking">
+  <div class="container">
+    <div class="donate-banner-inner">
+      <div class="reveal">
+        <span class="eyebrow" style="color: var(--gold-light);">הזמנת סיור</span>
+        <h2>מוכנים לצאת למסע?</h2>
+        <p>הזמנת כרטיסים מראש מומלצת. סיורים מודרכים בעברית, אנגלית, רוסית, צרפתית, ספרדית וגרמנית.</p>
+      </div>
+      <div class="donate-actions reveal">
+        <a href="tel:*5958" class="btn btn-gold">חיוג להזמנה: 5958*</a>
+        <a href="#" class="btn btn-light">הזמנה אונליין</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+      <span>© 2026 הקרן למורשת הכותל המערבי. כל הזכויות שמורות.</span>
+      <a href="../index.html" class="link-arrow" style="color: var(--gold-light);">חזרה לעמוד הבית</a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">
+  <div class="icon-circle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></div>
+  <div><strong style="display:block;font-size:0.95rem;">בוצע</strong><span id="toastMsg" style="font-size:0.85rem;opacity:0.7;">הפעולה הושלמה בהצלחה</span></div>
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

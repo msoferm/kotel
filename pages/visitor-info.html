@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="כל המידע למבקרים בכותל המערבי — שעות פתיחה, נגישות, דרכי הגעה, קוד לבוש וכללי ביקור." />
+  <title>מידע למבקר | הכותל המערבי</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Heebo:wght@300;400;500;600;700;800&family=David+Libre:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .info-tabs {
+      display: flex;
+      gap: 8px;
+      padding: 6px;
+      background: var(--bg-elev);
+      border-radius: 999px;
+      box-shadow: var(--shadow);
+      width: fit-content;
+      margin: 0 auto 56px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .info-tab {
+      padding: 12px 24px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all var(--dur) var(--ease);
+    }
+    .info-tab.active { background: var(--ink-900); color: #fff; }
+    .info-tab:not(.active):hover { background: var(--stone-100); }
+    .info-panel { display: none; animation: fadeIn 0.5s var(--ease-out); }
+    .info-panel.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .info-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .info-card {
+      background: var(--bg-elev);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      border: 1px solid var(--border);
+    }
+    .info-card h3 { margin-bottom: 16px; display:flex; align-items:center; gap:12px; }
+    .info-card h3 svg { width: 26px; height: 26px; color: var(--stone-600); }
+    .info-card ul { padding: 0; list-style: none; margin: 0; }
+    .info-card li { padding: 12px 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; gap: 16px; font-size: 0.95rem; }
+    .info-card li:last-child { border-bottom: none; }
+    .info-card li strong { color: var(--ink-900); }
+    .info-card li span { color: var(--text-muted); }
+    @media (max-width: 720px) { .info-cards { grid-template-columns: 1fr; } }
+  </style>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23d4a854'/%3E%3Cpath d='M10 22V11l6-3 6 3v11M10 22h12M13 22v-6h6v6' fill='none' stroke='%231a1d2e' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+<header class="site-header transparent" id="siteHeader">
+  <div class="container nav-wrap">
+    <a href="../index.html" class="logo">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-5 9 5v12"/><path d="M3 21h18M9 21v-9h6v9"/></svg></span>
+      <span class="logo-text"><strong>הכותל המערבי</strong><span>The Western Wall</span></span>
+    </a>
+    <nav class="nav" id="mainNav">
+      <a href="../index.html" class="nav-link">בית</a>
+      <a href="tours.html" class="nav-link">סיורים</a>
+      <a href="events.html" class="nav-link">אירועים</a>
+      <a href="visitor-info.html" class="nav-link">מידע למבקר</a>
+      <a href="gallery.html" class="nav-link">גלריה</a>
+      <a href="about.html" class="nav-link">אודות</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="donate.html" class="btn btn-ghost">לתרומה</a>
+      <a href="send-note.html" class="btn btn-gold">שלחו פתק</a>
+      <button class="menu-toggle" aria-label="תפריט" id="menuToggle"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="page-hero-bg">
+    <img src="https://images.unsplash.com/photo-1542630858-c08a937c1f4f?auto=format&fit=crop&w=2000&q=80" alt="" />
+  </div>
+  <div class="container page-hero-content">
+    <div class="breadcrumb">
+      <a href="../index.html">בית</a>
+      <span class="sep">/</span>
+      <span>מידע למבקר</span>
+    </div>
+    <h1>מתכננים ביקור</h1>
+    <p>הכל מה שצריך לדעת — שעות, דרכי הגעה, נגישות וכללי ביקור — כדי שהביקור שלכם יהיה נעים ומשמעותי.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="info-tabs reveal">
+      <button class="info-tab active" data-tab="hours">שעות</button>
+      <button class="info-tab" data-tab="access">נגישות</button>
+      <button class="info-tab" data-tab="getting">דרכי הגעה</button>
+      <button class="info-tab" data-tab="rules">כללי ביקור</button>
+    </div>
+
+    <!-- Hours -->
+    <div class="info-panel active" data-panel="hours">
+      <div class="info-cards reveal">
+        <div class="info-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> שעות הרחבה</h3>
+          <ul>
+            <li><strong>ראשון–חמישי</strong><span>24 שעות ביממה</span></li>
+            <li><strong>שישי</strong><span>פתוח עד כניסת השבת</span></li>
+            <li><strong>שבת ומועדים</strong><span>פתוח לתפילה בלבד</span></li>
+            <li><strong>מוצאי שבת</strong><span>מצאת השבת</span></li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> שעות הסיורים</h3>
+          <ul>
+            <li><strong>סיורי מנהרות</strong><span>א'–ה' 07:00–22:00, ו' 07:00–12:00</span></li>
+            <li><strong>המסע לירושלים</strong><span>א'–ה' 09:00–21:00</span></li>
+            <li><strong>מרכז המבקרים</strong><span>א'–ה' 08:30–22:00</span></li>
+            <li><strong>סגור</strong><span>שבת ומועדי ישראל</span></li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4"/></svg> זמני תפילה</h3>
+          <ul>
+            <li><strong>שחרית — חורף</strong><span>06:00, 07:00, 08:30</span></li>
+            <li><strong>שחרית — קיץ</strong><span>05:30, 06:30, 08:00</span></li>
+            <li><strong>מנחה</strong><span>40 דק' לפני שקיעה</span></li>
+            <li><strong>ערבית</strong><span>מנין רצוף ערב</span></li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg> תשלום</h3>
+          <ul>
+            <li><strong>גישה לרחבה</strong><span style="color:var(--stone-600);font-weight:600;">חופשי, ללא תשלום</span></li>
+            <li><strong>סיורי מנהרות</strong><span>החל מ-35 ₪</span></li>
+            <li><strong>המסע לירושלים</strong><span>החל מ-50 ₪</span></li>
+            <li><strong>חניית רכבים</strong><span>לפי תעריף עירוני</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Accessibility -->
+    <div class="info-panel" data-panel="access">
+      <div class="info-cards">
+        <div class="info-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="5" r="3"/><path d="M9 8v3l-3 5M15 8v3l3 5M12 13v6"/></svg> נגישות פיזית</h3>
+          <ul>
+            <li><strong>מעלית</strong><span>מהרחבה העליונה לרחבת התפילה</span></li>
+            <li><strong>רמפות</strong><span>בכל נקודות המעבר</span></li>
+            <li><strong>שירותים נגישים</strong><span>בכל אזורי הרחבה</span></li>
+            <li><strong>כיסאות גלגלים</strong><span>זמינים בכניסה, ללא תשלום</span></li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg> שירותים מותאמים</h3>
+          <ul>
+            <li><strong>חניית נכים</strong><span>סמוך לכניסה הראשית</span></li>
+            <li><strong>סיוע אישי</strong><span>זמין בתיאום מראש</span></li>
+            <li><strong>אזורי ישיבה</strong><span>פזורים ברחבי הרחבה</span></li>
+            <li><strong>טלפון לתיאום</strong><span><a href="tel:*5958" style="color:var(--stone-600);">5958*</a></span></li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 5 6 9H2v6h4l5 4z"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg> נגישות שמיעתית</h3>
+          <ul>
+            <li><strong>לולאת השראה</strong><span>בסיורים מודרכים</span></li>
+            <li><strong>תרגום לשפת הסימנים</strong><span>בתיאום מראש</span></li>
+            <li><strong>מערכת אקוסטית</strong><span>בכל מרכז המבקרים</span></li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/></svg> נגישות חזותית</h3>
+          <ul>
+            <li><strong>שילוט בכתב גדול</strong><span>וברייל בכל אזורי המעבר</span></li>
+            <li><strong>מדריכים מקליטים</strong><span>זמינים בעברית, אנגלית ועוד</span></li>
+            <li><strong>משטחי כיוון</strong><span>בכל המעברים והכניסות</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Getting there -->
+    <div class="info-panel" data-panel="getting">
+      <div class="info-cards">
+        <div class="info-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><circle cx="7" cy="11" r="3"/><circle cx="17" cy="11" r="3"/><path d="M5 6h14"/></svg> ברכב פרטי</h3>
+          <ul>
+            <li><strong>שער האשפות</strong><span>הכניסה הראשית לרחבה</span></li>
+            <li><strong>חניון מאמילה</strong><span>10 דק' הליכה</span></li>
+            <li><strong>חניון הר ציון</strong><span>15 דק' הליכה</span></li>
+            <li><strong>WAZE / Google Maps</strong><span>"רחבת הכותל"</span></li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg> רכבת קלה</h3>
+          <ul>
+            <li><strong>תחנת "שער יפו"</strong><span>15 דק' הליכה</span></li>
+            <li><strong>תחנת "התחנה המרכזית"</strong><span>עם הסעה</span></li>
+            <li><strong>תדירות</strong><span>כל 6 דקות</span></li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6v6m0 0v6m0-6h8m0 0V6m0 6v6"/></svg> אוטובוסים</h3>
+          <ul>
+            <li><strong>קווים 1, 3, 41</strong><span>לעיר העתיקה</span></li>
+            <li><strong>אגד / קווים בין-עירוניים</strong><span>לתחנה המרכזית</span></li>
+            <li><strong>שאטל ייעודי</strong><span>בערבי שבת וחג</span></li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> הולכי רגל</h3>
+          <ul>
+            <li><strong>משער יפו</strong><span>10 דק' דרך הרובע היהודי</span></li>
+            <li><strong>משער שכם</strong><span>15 דק' דרך הרובע המוסלמי</span></li>
+            <li><strong>משער ציון</strong><span>8 דק' דרך הר ציון</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rules -->
+    <div class="info-panel" data-panel="rules">
+      <div class="info-cards">
+        <div class="info-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg> קוד לבוש</h3>
+          <ul>
+            <li><strong>גברים</strong><span>חולצה עם שרוולים, כיסוי ראש</span></li>
+            <li><strong>נשים</strong><span>לבוש צנוע, כיסוי כתפיים</span></li>
+            <li><strong>כיסויים זמינים</strong><span>חינם בכניסה</span></li>
+            <li><strong>בשבת</strong><span>הקפדה יתרה על צניעות</span></li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M2 17h20"/></svg> צילום</h3>
+          <ul>
+            <li><strong>בימי חול</strong><span>צילום מותר ברחבה הכללית</span></li>
+            <li><strong>בשבת ומועדים</strong><span>צילום אסור לחלוטין</span></li>
+            <li><strong>צילום אירוע</strong><span>בתיאום מראש</span></li>
+            <li><strong>בתפילה</strong><span>הימנעו מהפרעה למתפללים</span></li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg> אבטחה</h3>
+          <ul>
+            <li><strong>בידוק בכניסה</strong><span>כל הנכנסים נבדקים</span></li>
+            <li><strong>חפצים גדולים</strong><span>הותרת חפצים בכניסה</span></li>
+            <li><strong>נשק</strong><span>אסור להיכנס עם נשק</span></li>
+            <li><strong>חפצים אסורים</strong><span>חומרי נפץ, סכינים</span></li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11.5V7a2 2 0 0 1 4 0v4.5"/><path d="M5 11h14v8a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3z"/></svg> כללי ביקור</h3>
+          <ul>
+            <li><strong>שתיקה</strong><span>ברחבת התפילה</span></li>
+            <li><strong>טלפונים</strong><span>על מצב שקט/דומם</span></li>
+            <li><strong>חיות מחמד</strong><span>לא מותרות ברחבה</span></li>
+            <li><strong>עישון</strong><span>אסור לחלוטין</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Contact / Help -->
+<section class="section donate-banner">
+  <div class="container">
+    <div class="donate-banner-inner">
+      <div class="reveal">
+        <span class="eyebrow" style="color: var(--gold-light);">שירות הציבור</span>
+        <h2>צריכים עזרה לתכנון הביקור?</h2>
+        <p>נציגי השירות שלנו זמינים לסייע בכל שאלה — הזמנת סיורים, נגישות מיוחדת, אירועים והדרכה.</p>
+      </div>
+      <div class="donate-actions reveal">
+        <a href="tel:*5958" class="btn btn-gold">חיוג מקוצר: 5958*</a>
+        <a href="mailto:info@thekotel.org" class="btn btn-light">info@thekotel.org</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+      <span>© 2026 הקרן למורשת הכותל המערבי. כל הזכויות שמורות.</span>
+      <a href="../index.html" class="link-arrow" style="color: var(--gold-light);">חזרה לעמוד הבית</a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast">
+  <div class="icon-circle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg></div>
+  <div><strong style="display:block;font-size:0.95rem;">בוצע</strong><span id="toastMsg" style="font-size:0.85rem;opacity:0.7;">הפעולה הושלמה בהצלחה</span></div>
+</div>
+
+<script src="../js/main.js"></script>
+<script>
+  document.querySelectorAll('.info-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+      document.querySelectorAll('.info-tab').forEach(t => t.classList.toggle('active', t === tab));
+      document.querySelectorAll('.info-panel').forEach(p => p.classList.toggle('active', p.dataset.panel === target));
+    });
+  });
+</script>
+</body>
+</html>
