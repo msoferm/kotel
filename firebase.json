@@ -5,16 +5,19 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**",
+      ".git/**",
+      "**/.git/**",
+      ".github/**",
+      "**/.github/**",
+      ".firebase/**",
       "supabase/**",
       "README.md",
       ".firebaserc",
-      ".github/**"
+      ".gitignore",
+      ".env*"
     ],
-    "cleanUrls": true,
+    "cleanUrls": false,
     "trailingSlash": false,
-    "rewrites": [
-      { "source": "**", "destination": "/index.html" }
-    ],
     "headers": [
       {
         "source": "**/*.@(jpg|jpeg|gif|png|svg|webp|woff2|woff|ttf)",
